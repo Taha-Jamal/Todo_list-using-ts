@@ -6,9 +6,16 @@ function storetext() {
 function showinfo(information) {
     let show = document.getElementById('itemlist');
     let currentli = document.getElementById('innerlist');
+    let circleicon = document.createElement('i');
+    let trashicon = document.createElement('i');
+    let Span = document.createElement('span');
     let li = currentli === null || currentli === void 0 ? void 0 : currentli.cloneNode(true);
-    li.textContent = information;
+    li.innerText = information;
     show.appendChild(li);
-    console.log(li);
+    circleicon.className = 'fa fa-circle text-red-600';
+    trashicon.className = 'fa-solid fa-trash cursor-pointer hover:text-red-600';
+    li.insertBefore(Span, li.firstChild);
+    Span.append(circleicon);
+    li.appendChild(trashicon);
 }
 //# sourceMappingURL=index.js.map
