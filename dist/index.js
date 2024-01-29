@@ -17,5 +17,8 @@ function showinfo(information) {
     li.insertBefore(Span, li.firstChild);
     Span.append(circleicon);
     li.appendChild(trashicon);
+    trashicon.addEventListener('click', function () {
+        show.removeChild(li);
+    });
 }
 //# sourceMappingURL=index.js.map
